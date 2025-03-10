@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+body{
+    background: linear-gradient(to left, #060e1c, #0d2144);
+}
+
+
+.outerPreloaderBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(0, 10, 10, 0.6);
+    /* background: linear-gradient(to left, #060e1c, #0d2144); */
+    /* transition:opacity 1.5s ease-in-out;
+    z-index: 9999; */
+    animation: preloder 1s ease-out 1;
+   
+}
+
+.innerPreloaderBox{
+    height: 30%;
+    width: 30%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+   
+}
+.innerPreloaderBox img{
+    height: 35%;
+    animation: spin 2s linear infinite;
+   
+    
+}
+@keyframes spin {
+    0%{
+       transform: rotate(0deg);
+    }
+    100%{
+       transform: rotate(360deg);
+    }
+   }
+
+
+
+
+
+
+li{
+    list-style: none;
+}
+ .boss-container a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    &&:hover{
+        color: rgb(33, 97, 160);
+    }
+}
+
+.boss-container{
+    /* background-color: rgb(32, 32, 59); */
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    filter: blur(6px);
+
+}
+.error-img{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.error-img img{
+    height: 20vh;
+}
+.header{
+    /* background-color: aqua; */
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.first-container{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+}
+.first-container li{
+    font-size: 23px;
+}
+.second-container{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.second-container li{
+    font-size: 17px;
+}
+/* hide item */
+#menu{
+    display: none;
+    position: absolute;
+    top: 2vh;
+    right:2vw;
+}
+#menu img{
+    height: 30px;
+
+}
+#cross{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    
+    }
+    #cross img{
+        height:25px;
+    }
+/* main start from here */
+.main{
+    /* background-color: rgb(106, 135, 106); */
+    height: 90vh;
+    width: 100vw;
+    color: rgb(233, 224, 224);
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    border-top-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    height: 90%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #060e1c, #0d2144);
+    /* background-color: rgb(28, 35, 41); */
+    filter: drop-shadow(3px 10px 10px rgb(0, 0, 0));
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        filter: drop-shadow(3px 10px 10px rgb(252, 226, 113));
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+   
+}
+.skill-section{
+    padding-left: 3px;
+    height: 20%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size:45%; */
+    font-size:45px;
+    font-family: fantasy;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        filter: drop-shadow(3px 10px 10px rgb(0, 0, 0));
+    }
+}
+
+
+
+
+
+
+
+
+
+.html-section{
+    height: 15%;
+    width: 90%;
+    /* background-color: #0054e6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        transform: scale(1.1);
+    }
+
+
+
+}
+.html-process-bar{
+    height: 100%;
+    width:90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.html-text{
+    height: 50%;
+    width: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transition: all;
+    transition-duration: 2s;
+    &&:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(10px 8px 6px rgb(242, 41, 15));
+    }
+}
+
+/* process baar ke andar ka logic */
+
+.Houter-process-bar{
+    height: 30%;
+    width:100%;
+    border: 1px solid  rgb(85, 78, 78);
+    border-radius: 5px;
+}
+.Hinner-color{
+    height: 100%;
+    width: 90%;
+    background: linear-gradient(to right, #a9796d, #ee1308);
+    /* background-color: rgb(235, 56, 56); */
+    animation: htmlProcess 10s ease 1 ;
+}
+@keyframes htmlProcess {
+    from{ width: 0%;}
+    to{ width: 90%;}
+}
+
+
+/* css section */
+
+
+.css-section{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        transform: scale(1.1);
+    }
+
+
+
+
+
+}
+.css-process-bar{
+    height: 100%;
+    width:90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.css-text{
+    height: 50%;
+    width: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transition: all;
+    transition-duration: 2s;
+    &&:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(10px 8px 6px rgb(214, 158, 150));
+    }
+}
+.css-perc{
+    padding-top: 2%;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* process baar ke andar ka logic */
+
+.Couter-process-bar{
+    height: 30%;
+    width:100%;
+    border: 1px solid rgb(85, 78, 78);
+    border-radius: 2px;
+}
+.Cinner-color{
+    height: 100%;
+    width: 85%;
+    background: linear-gradient(to right, #d28b7a, #eb5c55);
+    /* background-color: rgb(0, 52, 164); */
+    animation: cssProcess 10s ease 1 ;
+}
+@keyframes cssProcess {
+    from{ width: 0%;}
+    to{ width: 85%;}
+}
+
+/* js logic start here */
+
+.js-section{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        transform: scale(1.1);
+    }
+
+
+}
+.js-process-bar{
+    height: 100%;
+    width:90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.js-text{
+    height: 50%;
+    width: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transition: all;
+    transition-duration: 2s;
+    &&:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(10px 8px 6px rgb(215, 228, 68));
+    }
+}
+
+/* process baar ke andar ka logic */
+
+.Jouter-process-bar{
+    height: 30%;
+    width:100%;
+    border: 1px solid rgb(85, 78, 78);
+    border-radius: 2px;
+}
+.Jinner-color{
+    height: 100%;
+    width: 75%;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* background-color: rgb(171, 226, 77); */
+    animation: jsProcess 9s ease 1 ;
+}
+@keyframes jsProcess {
+    from{ width: 0%;}
+    to{ width: 75%;}
+}
+/* php logic start here */
+
+.php-section{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        transform: scale(1.1);
+    }
+
+
+}
+.php-process-bar{
+    height: 100%;
+    width:90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.php-text{
+    height: 50%;
+    width: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transition: all;
+    transition-duration: 2s;
+    &&:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(10px 8px 6px rgb(215, 228, 68));
+    }
+}
+
+/* process baar ke andar ka logic */
+
+.Pouter-process-bar{
+    height: 30%;
+    width:100%;
+    border: 1px solid rgb(85, 78, 78);
+    border-radius: 2px;
+}
+.Pinner-color{
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to left, #ff7e5f, #212b28);
+    /* background-color: rgb(171, 226, 77); */
+    animation: phpProcess 4s ease 1 ;
+}
+@keyframes phpProcess {
+    from{ width: 0%;}
+    to{ width: 50%;}
+}
+/* MYSQL logic start here */
+
+.sql-section{
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all;
+    transition-duration: 1s;
+    &&:hover{
+        transform: scale(1.1);
+    }
+
+}
+.sql-process-bar{
+    height: 100%;
+    width:90%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.sql-text{
+    height: 50%;
+    width: 10%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transition: all;
+    transition-duration: 2s;
+    &&:hover{
+        transform: scale(1.1);
+        filter: drop-shadow(10px 8px 6px rgb(215, 228, 68));
+    }
+}
+
+
+/* process baar ke andar ka logic */
+
+.Souter-process-bar{
+    height: 30%;
+    width:100%;
+    border: 1px solid rgb(85, 78, 78);
+    border-radius: 2px;
+}
+.Sinner-color{
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to left, #ff7e5f, #186173);
+    /* background-color: rgb(171, 226, 77); */
+    animation: sqlProcess 4s ease 1 ;
+}
+@keyframes sqlProcess {
+    from{ width: 0%;}
+    to{ width: 50%;}
+}
+
+
+
+
+
+
+
+/* UNABLE PHONE MESSAGE */
+
+@media (max-width: 239px){
+    *{
+        max-width: 100%;
+    }
+    .error-img{
+        display: flex;
+    }
+  .header{
+    display: none;
+  }
+  .main{
+    display: none;
+  }
+}
+
+
+
+
+
+/* MEDIA QUERY FOR EXTRA SMALL DEVICES (240PX - 320PX) */
+@media (min-width: 240px) and (max-width: 320px){
+    *{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-size: 13px;
+    }
+ 
+    #menu{
+        height: 34px;
+        width: 34px;
+        border: 2px solid #0d2144;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cross{
+        display: block;
+    }
+    .second-container{
+        position: relative;
+        top: 0vh;
+        z-index: 1;
+        background: linear-gradient(to top, #060e1c, #0d2144);
+        width: 40vw;
+        height: 70vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+     
+
+    }
+    .skill-section{
+        /* font-size:45%; */
+        font-size:35px;
+        font-family: fantasy;
+        background-color: red;
+    }
+    
+    .box{
+        filter: drop-shadow(3px 10px 10px rgb(252, 226, 113));
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: all;
+        transition-duration: 1s;
+            &&:hover{
+                filter: drop-shadow(3px 10px 10px rgb(0, 0, 0));
+                border-top-left-radius: 5%;
+                border-bottom-right-radius: 5%;
+        }
+    }
+}
+
+
+/* MEDIA QUERY FOR  SMALL DEVICES (321PX - 480PX) */
+@media (min-width: 321px) and (max-width: 480px){
+    *{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-size: 13px;
+    }
+    .first-container{
+        padding-left: 4vw;
+    }
+    
+    #menu{
+        position: absolute;
+        z-index: 1;
+        height: 34px;
+        width: 34px;
+        border: 2px solid #0d2144;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cross{
+        display: block;
+    }
+    .second-container{
+        position: relative;
+        top: 0vh;
+        z-index: 1;
+        background: linear-gradient(to top, #060e1c, #0d2144);
+        width: 40vw;
+        height: 70vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .skill-section{
+        /* font-size:45%; */
+        font-size:35px;
+        font-family: fantasy;
+        background-color: red;
+    }
+    .box{
+        filter: drop-shadow(3px 10px 10px rgb(252, 226, 113));
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: all;
+        transition-duration: 1s;
+            &&:hover{
+                filter: drop-shadow(3px 10px 10px rgb(0, 0, 0));
+                border-top-left-radius: 5%;
+                border-bottom-right-radius: 5%;
+        }
+    }
+}
+
+/* MEDIA QUERY FOR  MEDIUM DEVICES (481PX - 768PX) */
+@media (min-width: 481px) and (max-width: 768px){
+    *{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-size: 13px;
+    }
+    #menu{
+        position: absolute;
+        z-index: 1;
+        height: 34px;
+        width: 34px;
+        border: 2px solid #0d2144;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cross{
+        display: block;
+    }
+    .second-container{
+        position: relative;
+        top: 0vh;
+        left: 20vw;
+        z-index: 1;
+        background: linear-gradient(to top, #060e1c, #0d2144);
+        width: 20vw;
+        height: 70vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .skill-section{
+        /* font-size:45%; */
+        font-size:35px;
+        font-family: fantasy;
+        background-color: red;
+    }
+    
+    .box{
+        filter: drop-shadow(3px 10px 10px rgb(252, 226, 113));
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        transition: all;
+        transition-duration: 1s;
+            &&:hover{
+                filter: drop-shadow(3px 10px 10px rgb(0, 0, 0));
+                border-top-left-radius: 5%;
+                border-bottom-right-radius: 5%;
+        }
+    }
+}
+/* MEDIA QUERY FOR  MEDIUM DEVICES (481PX - 768PX) */
+@media (min-width: 769px) and (max-width: 1024px){
+    *{
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .second-container li{
+        font-size: 17px;
+    }
+    
+    #menu{
+        position: absolute;
+        z-index: 1;
+        height: 34px;
+        width: 34px;
+        border: 2px solid #0d2144;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #cross{
+        display: block;
+    }
+    .second-container{
+        position: relative;
+        top: 0vh;
+        left: 20vw;
+        z-index: 1;
+        background: linear-gradient(to top, #060e1c, #0d2144);
+        width: 20vw;
+        height: 70vh;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+

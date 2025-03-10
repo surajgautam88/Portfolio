@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="outerPreloaderBox"><div class="innerPreloaderBox"><img src="../image/prload.png"></div></div>
+    <div class="boss-container">
+      <!-- hide component -->
+      <div class="error-img"><img src="../image/pngwing.com (3).png" /></div>
+      <li id="menu"><img src="../image/icons8-menu.svg" /></li>
+      <header class="header">
+        <ul class="first-container">
+          <li><a href="../index.html">Portfolio</a></li>
+        </ul>
+
+        <ul class="second-container">
+          <li id="cross"><img src="../image/cross.png"></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../skills-section/skills.html">Skills</a></li>
+          <li><a href="../about-section/about.html">About Us</a></li>
+          <li><a href="#" style="color: rgb(33, 97, 160)">Contact</a></li>
+        </ul>
+      </header>
+
+      <main class="main">
+        <div class="box">
+          <div class="input-section">
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <h2>Contact with Us</h2>
+              <input type="hidden" name="access_key" value="4e4f5e62-b80f-49e8-ac12-852cb455a6e1">
+              <input type="text" name="name" placeholder="Your Name" id="name" />
+              <br />
+              <input type="email" name="email" placeholder="Your Email" id="email" />
+              <br />
+              <textarea
+                rows="4"
+                name="message"
+                placeholder="Your Message" id="message"
+              ></textarea>
+              <br />
+              <button id="submit"><img src="../image/right-arrow (1).png" /></button>
+            </form>
+          </div>
+          <div class="image-section">
+            <img src="../image/mypic.png" />
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="contact.js"></script>
+  </body>
+</html>
